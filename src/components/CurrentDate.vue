@@ -1,23 +1,43 @@
 <template>
+  <div class="dateBlock">
+    <span class="material-symbols-outlined">
+      calendar_month
+    </span>
     <div class="date">
-      {{ date.toLocaleString("en-us", { weekday: "long" }) }}
-      {{ date.getDate() }}
-      {{ date.toLocaleString("en-us", { month: "long" }) }}
+      {{ this.currentDate.toLocaleString("en-us", { weekday: "long" }) }}
+      {{ this.currentDate.getDate() }}
+      {{ this.currentDate.toLocaleString("en-us", { month: "long" }) }}
     </div>
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
-  props: {
-    date: Date
+  name: 'CurrentDate',
+  data() {
+    return {
+      currentDate: null,
+    }
+  },
+  methods: {
+    setCurrentDate() {
+      this.currentDate = new Date();
+    }
+  },
+  created() {
+    this.setCurrentDate()
   }
 }
 </script>
 
 <style scoped>
-.date {
-  font-size: calc(2 * var(--index));
+.dateBlock {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   margin-bottom: var(--index);
+  font-size: calc(1.5 * var(--index));
+  opacity: 70%;
 }
 </style>
