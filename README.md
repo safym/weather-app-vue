@@ -1,24 +1,18 @@
 # weather-app-vue
 
-## Project setup
+Небольшое веб приложение, которое показывает текущую погоду, температуру, давление и другое по вашему месторасположению. 
+
+Собранный проект на github pages: https://safym.github.io/weather-app-vue/
+
+# Запуск проекта
+
+## 1. Корневая директория 
+1.1.  Установить пакеты:
 ```
 npm install
 ```
-
-### Compiles and hot-reloads for development
+1.2. Скомпилировать (разработка):
 ```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
+npm run serve 
 ```
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
