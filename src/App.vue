@@ -1,25 +1,19 @@
 <template>
   <div v-bind:class="'app-wrapper ' + timeOfDay">
-
     <CurrentDate />
-    <WeatherCard />
-
-    <div class="weather-wrapper" v-cloak>
-
-    </div>
+    <MainWeatherWrapper />
   </div>
-
 </template>
 
 <script>
 import CurrentDate from './components/CurrentDate.vue'
-import WeatherCard from './components/WeatherCard.vue'
+import MainWeatherWrapper from './components/MainWeatherWrapper.vue'
 
 export default {
   name: 'App',
   components: {
     CurrentDate,
-    WeatherCard,
+    MainWeatherWrapper,
   },
   computed: {
     timeOfDay: function () {
@@ -98,4 +92,19 @@ export default {
   background-size: cover;
 }
 
+/* whole card styles */
+.card {
+  border-radius: 35px;
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 40px rgba(30, 23, 99, 0.2);
+  padding: calc(1.5 * var(--index));
+}
+
+@media screen and (min-width: 1200px) {
+  .card {
+    padding: 25px;
+  }
+}
 </style>

@@ -40,4 +40,8 @@ export default {
   font-size: calc(1.5 * var(--index));
   opacity: 70%;
 }
+
+.date {
+  margin-left: var(--index);
+}
 </style>
